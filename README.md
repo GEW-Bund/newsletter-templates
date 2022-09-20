@@ -24,4 +24,4 @@ Die umgewandelten, fertigen Templates sind als **compiled.zip** archiviert und k
 HTML-Templates mit bootstrap als eingebundene, externe Ressource liegen im Hauptverzeichnis. Im Unterordner **compiled** liegen jeweils aktuell umgewandelte, fertige Templates, die mit [bootstrap-email](https://github.com/bootstrap-email/bootstrap-email) umgewandelt wurden.
 
 Um eigene, neue Vorlagen umzuwandeln ist folgender Befehl notwendig
-`Befehl: bootstrap-email [IN.html] > [OUT.html]`
+`bootstrap-email [IN.html] > [OUT.html]`
