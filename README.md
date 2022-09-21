@@ -2,7 +2,7 @@
 Hier findest du Newsletter-Vorlagen ("Templates") für den Versand von E-Mails mit [Cleverreach](https://www.cleverreach.de).
 
 ## bootstrap
-Die Templates werden mithilfe von bootstrap in HTML geschrieben. Das ruby-package [bootstrap-email](https://github.com/bootstrap-email/bootstrap-email) kann sie dann umwandeln. Herauskommen eigenständige Templates, die ohne externe Ressourcen in jedem E-Mail-Client funktionieren.
+Die Templates wurden mithilfe von bootstrap in HTML geschrieben. Das ruby-package [bootstrap-email](https://github.com/bootstrap-email/bootstrap-email) kann sie dann umwandeln. Herauskommen eigenständige Templates, die ohne externe Ressourcen in jedem E-Mail-Client funktionieren.
 
 ## Templates herunterladen und nutzen
 Die umgewandelten, fertigen Templates sind als **compiled.zip** archiviert und können direkt heruntergeladen werden. Darin enthalten sind Templates, die direkt in Cleverreach importiert werden können.
