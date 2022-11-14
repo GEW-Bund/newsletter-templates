@@ -14,7 +14,7 @@
           height: 100%;
           -webkit-text-size-adjust: 100%;
           -ms-text-size-adjust: 100%;
-          font-family: 'Calibri', 'Open Sans', sans-serif;
+          font-family: Calibri, Open Sans, sans-serif;
           line-height: $line-height-base * $font-size-base;
           font-weight: $font-weight-base;
           font-size: $font-size-base;
@@ -37,53 +37,38 @@
         // to fix centering in yahoo
         table[align=center] {
           margin: 0 auto;
-          font-family: 'Calibri', 'Open Sans', sans-serif;
+          font-family: Calibri, Open Sans, sans-serif;
         }
 
         th,
         td,
         p,
         div,
-        a {
-          font-family: 'Calibri', 'Open Sans', sans-serif;
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          font-family: Calibri, Open Sans, sans-serif !important;
           text-align: left;
           line-height: $line-height-base * $font-size-base;
           font-size: $font-size-base;
-          margin: 0;
         }
 
-        a {
+        h1, h2, h3, h4, h5{
           color: #e3001f;
+          font-weight: bold;
+          line-height: normal;
+          a.color: #e3001f;
         }
-        h1 {
-       	color: #e3001f;
-        font-size: 26px;
-        line-height: normal;
-        }
-        h2 {
-       	color: #e3001f;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: normal;
-        }
-        h3 {
-       	color: #e3001f;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: normal;
-        }
-        h4 {
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: normal;
-        }
-        h5 {
-        color: #555555;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: normal;
-        }
+
+        h1{ font-size: 26px}
+        h2{ font-size: 20px}
+        h3{ font-size: 16px}
+        h4{ font-size: 16px}
+        h5{ font-size: 16px}
+
         .card	{
           background-color: white;
           border: 0px;
@@ -94,23 +79,26 @@
           border-radius: none;
         }
         .btn{
-          background-color: #482289;
           border-radius: none;
         }
-        .btn a{
-          color: #ffffff;
+        .btn-primary{
+          background-color: #e3001f !important;
+        }
+        .btn-secondary{
+          background-color: #482289 !important;
         }
         .bg-gray{
           background-color: #eeeeee;
         }
         .bg-red{
-          background-color: #482289;
+          background-color: #e3001f;
         }
-        .bg-red a{
-          color: #ffffff;
         }
         .bg-white{
           background-color: #ffffff;
+        }
+        .text-primary{
+          line-height: 1.2;
         }
     </style>
   </head>
@@ -131,22 +119,22 @@
       <!--#loop#-->
       <!--#loopitem name="Intro mit Ueberschrift"#-->
       <div class="card my-0">
-        <div class="card-body pb-0">
+        <div class="card-body pb-0 text-gray-700">
           <!--#onlineversion#--><p class="text-sm">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
         </div>
       <!--#spacer size="5px"#--><br><!--#/spacer#-->
       </div>
       <div class="card my-0">
-        <div class="card-body bg-red text-white my-0">
+        <div class="card-body bg-secondary text-white my-0">
           <!--#html mode="textonly" inline="true"#-->
-          <h4>+++ GEW Tariftelegramm TVöD ODER TV-L +++</h4>
+          <h2 class="text-white">+++ GEW Tariftelegramm TVöD ODER TV-L +++</h4>
           <!--#/html#-->
         </div>
       </div>
       <div class="card">
-        <div class="card-body my-0">
-          <h2><!--#html mode="textonly" inline="true"#-->Überschrift<!--#/html#--></h2>
-          <h5><!--#html mode="textonly" inline="true"#-->Unterzeile<!--#/html#--></h5>
+        <div class="card-body my-0 text-primary">
+          <h2 class="text-primary"><!--#html mode="textonly" inline="true"#-->Überschrift<!--#/html#--></h2>
+          <h5 class="text-primary"><!--#html mode="textonly" inline="true"#-->Unterzeile<!--#/html#--></h5>
         </div>
       </div>
       <!--#/loopitem#-->
@@ -155,7 +143,7 @@
       <!--#loop#-->
       <!--#loopitem name="Textfeld"#-->
       <div class="card my-0">
-        <div class="card-body">
+        <div class="card-body text-gray-700">
             <!--#html mode="default" inline="true"#-->
             <p class="text-gray-700">
               <b>Frankfurt a.M. – </b>Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich! Wir haben sehr lange verhandelt und jetzt ein sehr gutes Ergebnis für dich!
@@ -175,23 +163,58 @@
         <div class="card-body bg-gray">
           <!--#html mode="default" inline="true"#-->
           <a href="https://www.gew.de" target=_blank>
-            <h3>Call-to-Action-Überschrift</h3>
+            <h3 c>Call-to-Action-Überschrift</h3>
           </a>
           <!--#/html#-->
           <!--#html mode="textonly" inline="true"#-->
-          <p class="pb-5">
+          <p class="pb-5 text-gray-700">
             Dies ist der Teasertext für eine Kampagne. HIER Darf es etwas mehr Platz sein, um die Ziele der Kampagne zu erläutern. Aber mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein!
           </p>
           <!--#/html#-->
           <div class="ax-center">
             <!--#html mode="default" inline="true"#-->
-            <a class="btn btn ax-center" href="https://www.gew.de" target="_blank">Mehr erfahren!</a>
+            <a class="btn btn-secondary" href="https://www.gew.de" target="_blank">Mehr erfahren!</a>
             <!--#/html#-->
           </div>
         </div>
       </div>
       <!--#/loopitem#-->
       <!--#/loop-->
+
+      <!--#spacer size="50px"#--><br><!--#/spacer#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Call-to-Action mit Bild und Button"#-->
+      <div class="card my-0">
+        <div class="row bg-gray">
+          <div class="col-lg-4">
+            <div class="card-body">
+              <!--#image align="center" #--><img class="img-fluid ax-center" src="https://dummyimage.com//700x700" alt="Vorschaubild" /><!--#/image#-->
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!--#html mode="default" inline="true"#-->
+              <a href="https://www.gew.de" target=_blank>
+                <h3 class="text-primary"> Call-to-Action-Überschrift</h3>
+              </a>
+              <!--#/html#-->
+              <!--#html mode="textonly" inline="true"#-->
+              <p class="pb-5 text-gray-700">
+                Dies ist der Teasertext für eine Kampagne. HIER Darf es etwas mehr Platz sein, um die Ziele der Kampagne zu erläutern. Aber mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein!
+              </p>
+              <!--#/html#-->
+              <div class="ax-center">
+                <!--#html mode="default" inline="true"#-->
+                <a class="btn btn-secondary" href="https://www.gew.de" target="_blank">Mehr erfahren!</a>
+                <!--#/html#-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
 
       <!--#loop#-->
       <!--#loopitem name="Social Media Links"#-->

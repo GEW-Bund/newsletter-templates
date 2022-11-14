@@ -1,0 +1,21 @@
+// Override colors
+$primary: #e3001f;
+$secondary: #482289;
+// $success: #000000;
+// $info: #000000;
+// $warning: #000000;
+// $danger: #000000;
+// $light: #000000;
+// $dark: #000000;
+
+// overwrite fonts
+$font-family-sans-serif: 'Calibri', 'Open Sans', sans-serif !default;
+
+//= @import bootstrap-email;
+
+a {
+  font-family: Calibri, Open Sans, sans-serif;
+  text-align: left;
+  line-height: $line-height-base * $font-size-base;
+  font-size: $font-size-base;  
+}

@@ -14,7 +14,7 @@
           height: 100%;
           -webkit-text-size-adjust: 100%;
           -ms-text-size-adjust: 100%;
-          font-family: 'Calibri', 'Open Sans', sans-serif;
+          font-family: Calibri, Open Sans, sans-serif;
           line-height: $line-height-base * $font-size-base;
           font-weight: $font-weight-base;
           font-size: $font-size-base;
@@ -37,53 +37,38 @@
         // to fix centering in yahoo
         table[align=center] {
           margin: 0 auto;
-          font-family: 'Calibri', 'Open Sans', sans-serif;
+          font-family: Calibri, Open Sans, sans-serif;
         }
 
         th,
         td,
         p,
         div,
-        a {
-          font-family: 'Calibri', 'Open Sans', sans-serif;
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          font-family: Calibri, Open Sans, sans-serif !important;
           text-align: left;
           line-height: $line-height-base * $font-size-base;
           font-size: $font-size-base;
-          margin: 0;
         }
 
-        a {
+        h1, h2, h3, h4, h5{
           color: #e3001f;
+          font-weight: bold;
+          line-height: normal;
+          a.color: #e3001f;
         }
-        h1 {
-       	color: #e3001f;
-        font-size: 26px;
-        line-height: normal;
-        }
-        h2 {
-       	color: #e3001f;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: normal;
-        }
-        h3 {
-       	color: #e3001f;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: normal;
-        }
-        h4 {
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: normal;
-        }
-        h5 {
-        color: #555555;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: normal;
-        }
+
+        h1{ font-size: 26px}
+        h2{ font-size: 20px}
+        h3{ font-size: 16px}
+        h4{ font-size: 16px}
+        h5{ font-size: 16px}
+
         .card	{
           background-color: white;
           border: 0px;
@@ -94,11 +79,13 @@
           border-radius: none;
         }
         .btn{
-          background-color: #e3001f;
           border-radius: none;
         }
-        .btn a{
-          color: #ffffff;
+        .btn-primary{
+          background-color: #e3001f !important;
+        }
+        .btn-secondary{
+          background-color: #482289 !important;
         }
         .bg-gray{
           background-color: #eeeeee;
@@ -106,11 +93,12 @@
         .bg-red{
           background-color: #e3001f;
         }
-        .bg-red a{
-          color: #ffffff;
         }
         .bg-white{
           background-color: #ffffff;
+        }
+        .text-primary{
+          line-height: 1.2;
         }
     </style>
   </head>
@@ -130,10 +118,12 @@
       <!--#loopitem name="Intro mit Ueberschrift"#-->
       <div class="card my-0">
         <div class="card-body pb-0">
-          <!--#onlineversion#--><p class="text-sm">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
+          <!--#onlineversion#--><p class="text-gray-700">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a class="whitelink" href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
         </div>
         <div class="card-body">
-          <!--#html mode="textonly" inline="true"#--><h1 class="mb-2"><b>HIER Aussagekräftige Überschrift für den Newsletter</b></h1><!--#/html#-->
+          <div class="text-primary">
+            <!--#html mode="textonly" inline="true"#--><h1 class="mb-2" "text-primary"><b>HIER Aussagekräftige Überschrift für den Newsletter</b></h1><!--#/html#-->
+          </div>
           <hr>
           <!--#html mode="default" inline="true"#-->
             <p class="text-gray-700">
@@ -141,7 +131,7 @@
             </p>
             <!--#/html#-->
             <!--#html mode="textonly" inline="true"#-->
-            <p class="text-gray-600 pb-0">
+            <p class="text-gray-600">
               <br>
               Redaktion: Evelyn Bongiorno-Schielke, Stefan Weitzel und Ursula Henkel
             </p>
@@ -153,9 +143,17 @@
       <!--#/loop#-->
 
       <!--#loop#-->
-      <!--#loopitem name="Zwischenüberschrift"#-->
-      <div class="card pt-5">
-        <!--#html mode="textonly" inline="true"#--><h2>Zwischenüberschrift</h2><!--#/html#-->
+      <!--#loopitem name="Zwischenueberschrift"#-->
+      <div class="card pt-5 text-primary">
+        <!--#html mode="textonly" inline="true"#--><h2 class="text-primary">Aktuelles (Zwischenüberschrift)</h2><!--#/html#-->
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Zwischenueberschrift"#-->
+      <div class="card pt-5 text-primary">
+        <!--#html mode="textonly" inline="true"#--><h2 class="text-primary">GEW-Shop</h2><!--#/html#-->
       </div>
       <!--#/loopitem#-->
       <!--#/loop#-->
@@ -175,21 +173,21 @@
             <div class="card-body">
               <!--#html mode="default" inline="true"#-->
               <a href="https://www.gew.de" target=_blank>
-                <h3>Überschrift für einen Artikel im GEW-Shop</h3>
+                <h3 class="text-primary">Überschrift für einen Artikel im GEW-Shop</h3>
               </a>
               <!--#/html#-->
               <!--#html mode="textonly" inline="true"#-->
-              <p>
+              <p class="text-gray-700">
                 Ganz kurze Beschreibung. Ganz kurze Beschreibung. Ganz kurze Beschreibung.
               </p>
               <!--#/html#-->
               <!--#html mode="textonly" inline="true"#-->
-              <p class="pb-5">
+              <p class="pb-5 text-gray-700">
                 <b>Preis: 0,00045 BTC</b>
               </p>
               <!--#/html#-->
               <!--#html mode="default" inline="true"#-->
-              <a class="btn btn ax-center" href="https://www.gew.de" target="_blank">Zum Artikel</a>
+              <a class="btn btn-primary" href="https://www.gew.de" target="_blank">Zum Artikel</a>
               <!--#/html#-->
             </div>
           </div>
@@ -199,7 +197,7 @@
       <!--#/loop#-->
 
       <!--#loop#-->
-      <!--#loopitem name="Shop-Artikel mit Button"#-->
+      <!--#loopitem name="Shop-Artikel mit Bild"#-->
       <div class="card my-0">
         <div class="row">
           <div class="col-lg-4">
@@ -233,23 +231,25 @@
       <!--#/loopitem#-->
       <!--#/loop#-->
 
+      <!--#spacer size="50px"#--><br><!--#/spacer#-->
+
       <!--#loop#-->
       <!--#loopitem name="Call-to-Action mit Button"#-->
       <div class="card my-0">
         <div class="card-body bg-gray">
           <!--#html mode="default" inline="true"#-->
           <a href="https://www.gew.de" target=_blank>
-            <h3>Call-to-Action-Überschrift</h3>
+            <h3 c>Call-to-Action-Überschrift</h3>
           </a>
           <!--#/html#-->
           <!--#html mode="textonly" inline="true"#-->
-          <p class="pb-5">
+          <p class="pb-5 text-gray-700">
             Dies ist der Teasertext für eine Kampagne. HIER Darf es etwas mehr Platz sein, um die Ziele der Kampagne zu erläutern. Aber mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein!
           </p>
           <!--#/html#-->
           <div class="ax-center">
             <!--#html mode="default" inline="true"#-->
-            <a class="btn btn ax-center" href="https://www.gew.de" target="_blank">Mehr erfahren!</a>
+            <a class="btn btn-primary" href="https://www.gew.de" target="_blank">Mehr erfahren!</a>
             <!--#/html#-->
           </div>
         </div>
@@ -303,7 +303,7 @@
       <!--#loop#-->
       <!--#loopitem name="E-Mail Fuss (Impressum)"#-->
       <div class="card">
-        <div class="card-body text-center">
+        <div class="card-body text-center text-gray-700">
           <b>Gewerkschaft Erziehung und Wissenschaft (GEW)</b><br>
           Hauptvorstand<br>
           Reifenberger Str. 21<br>

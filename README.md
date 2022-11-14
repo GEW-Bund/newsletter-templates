@@ -25,3 +25,6 @@ HTML-Templates mit bootstrap als eingebundene, externe Ressource liegen im Haupt
 
 Um eigene, neue Vorlagen umzuwandeln ist folgender Befehl notwendig
 `bootstrap-email [IN.html] > [OUT.html]`
+
+**WICHTIG**
+Die in diesen repository abgelegte `bootstrap-email.scss` muss unbedingt im Arbeitsverzeichnis liegen!
