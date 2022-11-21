@@ -44,30 +44,12 @@
         td,
         p,
         div,
-        a,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
+        a,{
           font-family: Calibri, Open Sans, sans-serif !important;
           text-align: left;
           line-height: $line-height-base * $font-size-base;
           font-size: $font-size-base;
         }
-
-        h1, h2, h3, h4, h5{
-          color: #e3001f;
-          font-weight: bold;
-          line-height: normal;
-          a.color: #e3001f;
-        }
-
-        h1{ font-size: 26px}
-        h2{ font-size: 20px}
-        h3{ font-size: 16px}
-        h4{ font-size: 16px}
-        h5{ font-size: 16px}
 
         .card	{
           background-color: white;
@@ -118,18 +100,19 @@
       <!--#loopitem name="Intro mit Ueberschrift"#-->
       <div class="card my-0">
         <div class="card-body pb-0">
-          <!--#onlineversion#--><p class="text-gray-700">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a class="whitelink" href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
+          <!--#onlineversion#--><p class="text-gray-700">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a class="link-primary" href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
         </div>
         <div class="card-body">
-          <div class="text-primary">
-            <!--#html mode="textonly" inline="true"#--><h1 class="mb-2" "text-primary"><b>HIER Aussagekräftige Überschrift für den Newsletter</b></h1><!--#/html#-->
+          <div class="mb-2 text-primary text-2xl fw-700">
+            <!--#html mode="textonly" inline="true"#-->
+            HIER Aussagekräftige Überschrift
+            <!--#/html#-->
           </div>
           <hr>
           <!--#html mode="default" inline="true"#-->
-            <p class="text-gray-700">
-              Hallo! Wir haben da ein paar Fragen an dich. Magst du uns helfen? Bitte erkläre hier in etwa 250 Zeichen, worum es geht. Du kannst auch hier oben schon einen Link setzen! Zum Beispiel <a href="https://www.gew.de">hier.</a>
-
-            </p>
+          <p class="text-gray-700">
+            Hallo! Wir haben da ein paar Fragen an dich. Magst du uns helfen? Bitte erkläre hier in etwa 250 Zeichen, worum es geht. Du kannst auch hier oben schon einen Link setzen! Zum Beispiel <a href="https://www.gew.de">hier.</a>
+          </p>
             <!--#/html#-->
             <!--#html mode="textonly" inline="true"#-->
             <p class="text-gray-600">
@@ -150,16 +133,17 @@
             <img class="img-fluid" src="https://dummyimage.com//600x337" alt="Titelbild" />
               <!--#/image#-->
               <div class="card-body bg-gray pb-5">
-                <!--#html mode="default" inline="true"#-->
-                <a href="https://www.gew.de" target=_blank>
-                  <h2 class="text-primary">Überschrift des Schwerpunktes</h2>
-                </a>
-                <!--#/html#-->
+                <div class="my-2 link-primary text-primary text-xl fw-700 text-decoration-none">
+                    <!--#html mode="link" css-to-inline="true"  #-->
+                    <a class="link-primary text-primary text-xl fw-700 text-decoration-none" href="https://www.gew.de" target=_blank>Überschrift des Schwerpunktes</a>
+                    <!--#/html#-->
+                </div>
               <!--#html mode="default" inline="true"#-->
-                <p class="pb-5 text-gray-700">
+                <p class="text-gray-700">
                   Dies ist der Teasertext für den Schwerpunkt. Bitte nicht mehr als 250 Zeichen, da nicht mehr gelesen wird! Bitte nicht mehr als 250 Zeichen formulieren! Bitte nicht mehr als 250 Zeichen formulieren! Bitte nicht mehr als 250 Zeichen formulieren!
                 </p>
                 <!--#/html#-->
+                <br>
                 <div class="ax-center">
                   <!--#html mode="default" inline="true"#-->
                   <a class="btn btn-lg btn-primary" href="https://www.gew.de" target="_blank">Mehr erfahren!</a>
@@ -191,11 +175,11 @@
       <!--#loopitem name="Call-to-Action mit Button"#-->
       <div class="card my-0">
         <div class="card-body bg-gray">
-          <!--#html mode="default" inline="true"#-->
-          <a href="https://www.gew.de" target=_blank>
-            <h3 c>Call-to-Action-Überschrift</h3>
-          </a>
-          <!--#/html#-->
+          <div class="my-2 link-primary text-primary text-xl fw-700 text-decoration-none">
+            <!--#html mode="link" css-to-inline="true"  #-->
+            <a class="link-primary text-primary text-xl fw-700 text-decoration-none" href="https://www.gew.de" target=_blank>Call-to-Action-Überschrift</a>
+            <!--#/html#-->
+          </div>
           <!--#html mode="textonly" inline="true"#-->
           <p class="pb-5 text-gray-700">
             Dies ist der Teasertext für eine Kampagne. HIER Darf es etwas mehr Platz sein, um die Ziele der Kampagne zu erläutern. Aber mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein!
@@ -209,7 +193,7 @@
         </div>
       </div>
       <!--#/loopitem#-->
-      <!--#/loop-->      
+      <!--#/loop-->
 
       <!--#loop#-->
       <!--#loopitem name="Social Media Links"#-->

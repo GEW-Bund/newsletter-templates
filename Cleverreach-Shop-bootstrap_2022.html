@@ -44,30 +44,12 @@
         td,
         p,
         div,
-        a,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
+        a,{
           font-family: Calibri, Open Sans, sans-serif !important;
           text-align: left;
           line-height: $line-height-base * $font-size-base;
           font-size: $font-size-base;
         }
-
-        h1, h2, h3, h4, h5{
-          color: #e3001f;
-          font-weight: bold;
-          line-height: normal;
-          a.color: #e3001f;
-        }
-
-        h1{ font-size: 26px}
-        h2{ font-size: 20px}
-        h3{ font-size: 16px}
-        h4{ font-size: 16px}
-        h5{ font-size: 16px}
 
         .card	{
           background-color: white;
@@ -118,11 +100,13 @@
       <!--#loopitem name="Intro mit Ueberschrift"#-->
       <div class="card my-0">
         <div class="card-body pb-0">
-          <!--#onlineversion#--><p class="text-gray-700">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a class="whitelink" href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
+          <!--#onlineversion#--><p class="text-gray-700">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a class="link-primary" href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
         </div>
         <div class="card-body">
-          <div class="text-primary">
-            <!--#html mode="textonly" inline="true"#--><h1 class="mb-2" "text-primary"><b>HIER Aussagekräftige Überschrift für den Newsletter</b></h1><!--#/html#-->
+          <div class="mb-2 text-primary text-2xl fw-700">
+            <!--#html mode="textonly" inline="true"#-->
+            HIER Aussagekräftige Überschrift für den Newsletter
+            <!--#/html#-->
           </div>
           <hr>
           <!--#html mode="default" inline="true"#-->
@@ -145,15 +129,7 @@
       <!--#loop#-->
       <!--#loopitem name="Zwischenueberschrift"#-->
       <div class="card pt-5 text-primary">
-        <!--#html mode="textonly" inline="true"#--><h2 class="text-primary">Aktuelles (Zwischenüberschrift)</h2><!--#/html#-->
-      </div>
-      <!--#/loopitem#-->
-      <!--#/loop#-->
-
-      <!--#loop#-->
-      <!--#loopitem name="Zwischenueberschrift"#-->
-      <div class="card pt-5 text-primary">
-        <!--#html mode="textonly" inline="true"#--><h2 class="text-primary">GEW-Shop</h2><!--#/html#-->
+        <!--#html mode="textonly" inline="true"#--><p class="text-primary link-primary fw-700">GEW-Shop</p><!--#/html#-->
       </div>
       <!--#/loopitem#-->
       <!--#/loop#-->
@@ -171,19 +147,19 @@
           </div>
           <div class="col-lg-12">
             <div class="card-body">
-              <!--#html mode="default" inline="true"#-->
-              <a href="https://www.gew.de" target=_blank>
-                <h3 class="text-primary">Überschrift für einen Artikel im GEW-Shop</h3>
-              </a>
-              <!--#/html#-->
+              <div class="my-2 link-primary text-primary fw-700 text-decoration-none">
+                <!--#html mode="link" css-to-inline="true"  #-->
+                <a class="link-primary text-primary fw-700 text-decoration-none" href="https://www.gew.de" target=_blank>Überschrift für einen Artikel im GEW-Shop</a>
+                <!--#/html#-->
+              </div>
               <!--#html mode="textonly" inline="true"#-->
               <p class="text-gray-700">
                 Ganz kurze Beschreibung. Ganz kurze Beschreibung. Ganz kurze Beschreibung.
               </p>
               <!--#/html#-->
               <!--#html mode="textonly" inline="true"#-->
-              <p class="pb-5 text-gray-700">
-                <b>Preis: 0,00045 BTC</b>
+              <p class="pb-5 text-gray-700 fw-700">
+                Preis: 0,00045 BTC
               </p>
               <!--#/html#-->
               <!--#html mode="default" inline="true"#-->
@@ -211,18 +187,18 @@
           </div>
           <div class="col-lg-12">
             <div class="card-body">
-              <!--#html mode="default" inline="true"#-->
-              <a href="https://www.gew.de" target=_blank>
-                <h3>Überschrift für einen Artikel im GEW-Shop</h3>
-              </a>
-              <!--#/html#-->
+              <div class="my-2 link-primary text-primary fw-700 text-decoration-none">
+                <!--#html mode="link" css-to-inline="true"  #-->
+                <a class="link-primary text-primary fw-700 text-decoration-none" href="https://www.gew.de" target=_blank>Überschrift für einen Artikel im GEW-Shop</a>
+                <!--#/html#-->
+              </div>
               <!--#html mode="textonly" inline="true"#-->
-              <p>
+              <p class="text-gray-700">
                 Ganz kurze Beschreibung. Ganz kurze Beschreibung. Ganz kurze Beschreibung.
               </p>
               <!--#/html#-->
-              <p class="pb-5">
-                <b>Preis: 0,00045 BTC</b>
+              <p class="pb-5 text-gray-700 fw-700">
+              Preis: 0,00045 BTC
               </p>
             </div>
           </div>
@@ -237,11 +213,11 @@
       <!--#loopitem name="Call-to-Action mit Button"#-->
       <div class="card my-0">
         <div class="card-body bg-gray">
-          <!--#html mode="default" inline="true"#-->
-          <a href="https://www.gew.de" target=_blank>
-            <h3 c>Call-to-Action-Überschrift</h3>
-          </a>
-          <!--#/html#-->
+          <div class="my-2 link-primary text-primary text-xl fw-700 text-decoration-none">
+            <!--#html mode="link" css-to-inline="true"  #-->
+            <a class="link-primary text-primary text-xl fw-700 text-decoration-none" href="https://www.gew.de" target=_blank>Call-to-Action-Überschrift</a>
+            <!--#/html#-->
+          </div>
           <!--#html mode="textonly" inline="true"#-->
           <p class="pb-5 text-gray-700">
             Dies ist der Teasertext für eine Kampagne. HIER Darf es etwas mehr Platz sein, um die Ziele der Kampagne zu erläutern. Aber mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein! Mehr als 350 Zeichen sollten es auch hier nicht sein!

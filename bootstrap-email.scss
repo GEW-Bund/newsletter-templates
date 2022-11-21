@@ -1,6 +1,7 @@
 // Override colors
 $primary: #e3001f;
 $secondary: #482289;
+$light: #FFFFFF;
 // $success: #000000;
 // $info: #000000;
 // $warning: #000000;
@@ -17,5 +18,6 @@ a {
   font-family: Calibri, Open Sans, sans-serif;
   text-align: left;
   line-height: $line-height-base * $font-size-base;
-  font-size: $font-size-base;  
+  font-size: $font-size-base;
+  color: #e3001f;
 }
