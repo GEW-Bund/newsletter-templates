@@ -14,6 +14,8 @@ Die umgewandelten, fertigen Templates sind als **compiled.zip** archiviert und k
 
 **Cleverreach-KOMPLEX-bootstrap_2022** – Komplexer Newsletter mit mehr Elementen und mehr Flexibilität, aber auch mehr Komplexität im Umgang in Cleverreach.
 
+**Cleverreach-Mitglied-werden-bootstrap_2023** – Vorlage für den Versand vom E-Mails im Rahmen des Prozesses "Mitglied-werden"
+
 **Cleverreach-Shop-bootstrap_2022** – Einfacher Newsletter für Shop-Artikel.
 
 **Cleverreach-Tariftelegramm-bootstrap_2022** – Basis für den Versand der Tariftelegramme.
