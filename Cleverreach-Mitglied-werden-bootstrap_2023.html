@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+       /* Add custom classes and styles that you want inlined here */
+         body, .body {
+          margin: 0;
+          Margin: 0; // For compatibility with Outlook
+          padding: 0;
+          border: 0;
+          outline: 0;
+          width: 100%;
+          min-width: 100%;
+          height: 100%;
+          -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
+          font-family: Calibri, Open Sans, sans-serif;
+          line-height: $line-height-base * $font-size-base;
+          font-weight: $font-weight-base;
+          font-size: $font-size-base;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          background-color: $body-bg;
+          color: #555555;
+        }
+
+        img {
+          border: 0 none;
+          height: auto;
+          line-height: 100%;
+          outline: none;
+          text-decoration: none;
+          display: block;
+        }
+
+        // to fix centering in yahoo
+        table[align=center] {
+          margin: 0 auto;
+          font-family: Calibri, Open Sans, sans-serif;
+        }
+
+        th,
+        td,
+        p,
+        div,
+        a,{
+          font-family: Calibri, Open Sans, sans-serif !important;
+          text-align: left;
+          line-height: $line-height-base * $font-size-base;
+          font-size: $font-size-base;
+        }
+
+        .card	{
+          background-color: white;
+          border: 0px;
+          solid #e2e8f0;
+          border-radius: none;
+        }
+        .card-body{
+          border-radius: none;
+        }
+        .btn{
+          border-radius: none;
+        }
+        .btn-primary{
+          background-color: #e3001f !important;
+        }
+        .btn-secondary{
+          background-color: #482289 !important;
+        }
+        .bg-gray{
+          background-color: #eeeeee;
+        }
+        .bg-red{
+          background-color: #e3001f;
+        }
+        }
+        .bg-white{
+          background-color: #ffffff;
+        }
+        .text-primary{
+          line-height: 1.2;
+        }
+    </style>
+  </head>
+  <body class="bg-light bg-white">
+
+    <div class="container">
+
+      <!--#loop#-->
+      <!--#loopitem name="Logo"#-->
+      <div class="text-right">
+      	<img class="max-w-48 mt-2" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/GEW_Logo_mit_Schriftzug_weiss.png" alt="Logo" />
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Intro mit Ueberschrift"#-->
+      <div class="card my-0">
+        <div class="card-body">
+          <div class="mb-2 text-primary text-2xl fw-700">
+            <!--#html mode="textonly" inline="true"#-->
+            HIER Aussagekräftige Überschrift für das Mailing
+            <!--#/html#-->
+          </div>
+          <hr>
+          <!--#html mode="default" inline="true"#-->
+            <p class="text-gray-700">
+              Hallo {FIRSTNAME} {LASTNAME},<br><br>
+              - kleine Introzeile <br><br>
+              Nun benötigen wir noch einige Informationen von dir, um dich in der GEW willkommen heißen zu können. Neben den Angaben zu deiner Person brauchen wir u.a. folgendes:<br><br>
+              <p>
+                <li>Adresse deiner Dienststelle, Schule oder Einrichtung,</li>
+                <li>deine Gehaltsgruppe oder alternativ dein Brutto-Gehalt,</li>
+                <li>deine Kontoverbindung bzw. IBAN</li>
+                <br>
+              </p>
+            </p>
+            <!--#/html#-->
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Call-to-Action zum Antrag"#-->
+      <div class="card my-0">
+        <div class="card-body bg-gray">
+          <!--#html mode="textonly" inline="true"#-->
+          <p class="pb-5 text-gray-700">
+            Hier kannst du deinen Daten vervollständigen.<br>
+            Dein <b>Bearbeitungscode</b> lautet: <b>{BEARBEITUNGSCODE}</b>
+          </p>
+          <!--#/html#-->
+          <div class="ax-center">
+            <!--#html mode="default" inline="true"#-->
+            <a class="btn btn-primary" href="https://mitgliederoffensive.dev-gew.de/aenderung" target="_blank">Jetzt Antrag vervollständigen!</a>
+            <!--#/html#-->
+          </div>
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Zwischenueberschrift"#-->
+      <div class="card pt-5 text-primary">
+        <!--#html mode="textonly" inline="true"#--><p class="text-primary link-primary fw-700">Es gibt gute Gründe für eine GEW-Mitgliedschaft!</p><!--#/html#-->
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Gute Gründe für die Mitgliedschaft"#-->
+      <div class="card my-0">
+        <div class="card-body">
+          <!--#html mode="default" inline="true"#-->
+            <p class="text-gray-700">
+              <b>Eine solidarische ­Gemeinschaft</b><br>
+              <p>
+                Solidarität heißt zu­sammen­­halten! Bei uns kämpft nicht jeder für sich, sondern alle fürein­ander. Angestellter und Beamtin, Lehrerin und Erzieherin, Studierende und Rentnerin!
+              </p>
+              <b>Deine Rechte verteidigen – mit Rechtsschutz im Rücken</b><br>
+              <p>
+                Dein Arbeitgeber hat dich falsch ein gruppiert? Unfair beurteilt? Zu Unrecht gekündigt? Damit hat er bei uns keine Chance! In der GEW hast du nicht nur eine kostenfreie Rechtsberatung, sondern umfassenden Rechtsschutz in allen beruﬂichen Angelegenheiten – wenn nötig bis in die letzte Instanz!
+              </p>
+              <b>Streiken, ohne arm zu werden</b><br>
+              <p>
+                Wenn die Arbeitgeber sich wieder taub s­tellen, bleibt uns keine Wahl: Wir gehen auf die Straße. Arbeitgeber zahlen zwar kein Gehalt bei solchen Arbeitskämpfen – dafür zahlen wir dein Streikgeld! Damit sich jede*r das Kämpfen leisten kann.
+              </p>
+              <b>Aktiv in deiner ­Gewerkschaft</b><br>
+              <p>
+                Die GEW ist eine Mitmachgewerkschaft. Wir sind der richtige Ort für dein politisches Engagement im ­Ehrenamt. Deine Meinung zählt und deine ­Perspektive ist gefragt!
+              </p>
+              <b>Bessere Arbeitsbedingungen und fairer Lohn</b><br>
+              <p>
+                Du bist mehr wert! Gemeinsam kämpfen wir mit dir für bessere Arbeitsbedingungen und einen fairen Lohn! Als Gewerkschaftsmitglied hast du ein Anrecht auf den Tarifvertrag, der in deinem Betrieb oder bei deinem Träger erkämpft wurde.
+              </p>
+              <b>Einwandfrei versichert</b><br>
+              <p>
+                Wenn im Job was schief geht, stehst du nicht alleine da. Wir springen mit unserer Berufshaftplichtversicherung für dich ein. Ein verlorener Dienstschlüssel oder Glasbruch im Labor sind kein Problem.
+              </p>
+              <b>Lebenslang lernen</b><br>
+              <p>
+                Unsere Mitgliederzeitschrift „E&W“ sowie zahlreiche Broschüren und Ratgeber helfen dir im Arbeitsalltag – aber auch in der bildungspolitischen Debatte. Zudem findest du bei uns viele interessante Fortbildungsangebote, die dir für deinen Beruf und darüber hinaus spannendes und nützliches Wissen vermitteln.
+              </p>
+              <b>Für eine gerechte Gesellschaft</b><br>
+              <p>
+                Klimagerechtigkeit, Feminismus, klare Kante gegen Rechts – es gibt viel zu tun. Denn als Gewerkschaften vertreten wir auch die Interessen von dir und deinen Kolleg*innen, die über euren Arbeitsplatz hinausgehen. Werde Teil deiner GEW, denn nur zusammen lässt sich was bewegen!
+              </p>
+              <p>
+                <b>Mehr gute Gründe für die GEW findest du hier:</b> <a class="text-primary link-primary fw-700" href="https://www.gew.de/11-gute-gruende" target="_blank">gew.de/11-gute-gruende</a>
+            </p>
+            <!--#/html#-->
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Call-to-Action zur FAQ"#-->
+      <div class="card my-0">
+        <div class="card-body bg-gray">
+          <!--#html mode="textonly" inline="true"#-->
+          <p class="pb-5 text-gray-700">
+            Falls du noch unsicher bist oder <b>Fragen zu den Leistungen einer GEW-Mitgliedschaft</b> hast, haben wir hier die <b>Antworten auf die wichtigsten Fragen</b> zur GEW-Mitgliedschaft für dich zusammengestellt: <br>
+          </p>
+          <!--#/html#-->
+          <div class="ax-center">
+            <!--#html mode="default" inline="true"#-->
+            <a class="btn btn-primary" href="https://www.gew.de/mitglied-werden/fragen-und-antworten-zur-mitgliedschaft" target="_blank">Alle Antworten zur Mitgliedschaft</a>
+            <!--#/html#-->
+          </div>
+          <br>
+          <!--#html mode="textonly" inline="true"#-->
+          <p class="pb-5 text-gray-700">
+            Du möchtest deine Frage lieber <b>persönlich</b> stellen oder brauchst Hilfe? Melde dich telefonisch unter <b>069-78973-0</b> oder antworte einfach auf diese <b><a href="mailto:mitglied-werden@gew.de">E-Mail.</a></b><br>
+          </p>
+          <!--#/html#-->
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Abschluss "Mitglied werden""#-->
+      <div class="card my-0">
+        <div class="card-body">
+          <!--#html mode="default" inline="true"#-->
+            <p class="text-gray-700">
+              Du erhältst noch drei weitere Erinnerungsmail von uns, danach werden Deine Daten gelöscht. Möchtest du den Prozess vorher beenden und deine Daten selbst löschen, klicke bitte auf den folgenden Link: <a href="{UNSUBSCRIBE}">Meine Daten löschen.</a>
+            </p>
+            <!--#/html#-->
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+      <!--#spacer size="50px"#--><br><!--#/spacer#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="Social Media Links"#-->
+      <div class="card">
+        <div class="card-body">
+          <table class="ax-center p-5">
+            <tr>
+              <td class="p-5">
+                <a href="https://www.instagram.com/gew_bund/" target=_blank>
+                  <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-instagram.png">
+                </a>
+              </td>
+              <td class="p-5">
+                <a href="https://www.facebook.com/GEW.DieBildungsgewerkschaft/" target=_blank>
+                  <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-facebook.png">
+                </a>
+              </td>
+              <td class="p-5">
+                <a href="https://www.twitter.com/gew_bund" target=_blank>
+                  <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-twitter.png">
+                </a>
+              </td>
+              <td class="p-5">
+                <a href="https://www.youtube.com/user/GEWHauptvorstand" target=_blank>
+                  <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-youtube.png">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+      <!--#loop#-->
+      <!--#loopitem name="E-Mail Fuss (Impressum)"#-->
+      <div class="card">
+        <div class="card-body text-center text-gray-700">
+          <b>Gewerkschaft Erziehung und Wissenschaft (GEW)</b><br>
+          Hauptvorstand<br>
+          Reifenberger Str. 21<br>
+          60489 Frankfurt a.M.<br>
+          Tel.: 069/78973-0<br>
+          <a href="https://www.gew.de/mitglied-werden/fragen" target=_blank>Kontakt</a><br>
+          <a href="https://www.gew.de/datenschutz" target=_blank>Datenschutzerklärung</a>
+        </div>
+      </div>
+      <!--#/loopitem#-->
+      <!--#/loop#-->
+
+    </div>
+
+  </body>
+</html>
