@@ -12,6 +12,7 @@ Die Templates werden mit [bootstrap-email](https://github.com/bootstrap-email/bo
 ├── legacy/           # Archivierte alte Templates (2022/2023)
 ├── AGENTS.md         # Diese Datei
 ├── README.md         # Allgemeine Doku
+├── compiled.zip      # Archiv aller kompilierten Templates
 └── .gitignore        # .sass-cache/, *.bak
 ```
 
@@ -27,6 +28,9 @@ done
 **Wichtig:** `bootstrap-email.scss` muss im Arbeitsverzeichnis liegen.
 
 ## Kritische Regeln (beim Bearbeiten/Erstellen von Templates)
+
+### Kein `<title>`-Tag
+CleverReach setzt den `<title>` beim Versand automatisch (aus dem Betreff). Ein `<title>` im Template darf **nicht** vorhanden sein.
 
 ### Keine CSS Custom Properties
 `var(--gew-red)` funktioniert nicht → immer direkte Hex-Werte (`#e3001f`).
