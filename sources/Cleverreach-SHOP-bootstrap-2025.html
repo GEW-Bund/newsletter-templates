@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEW Newsletter</title>
+    <style>
+        /* Basis-Styling mit Calibri */
+        body {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+            background-color: #fafbfc;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        /* Typografie mit Calibri */
+        h1 {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 300; /* Calibri Light */
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            line-height: 1.2;
+            color: #343a40;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 700; /* Calibri Bold */
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            line-height: 1.3;
+            color: #343a40;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 700; /* Calibri Bold */
+            font-size: clamp(1.125rem, 2.8vw, 1.375rem);
+            line-height: 1.4;
+            color: #e3001f;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 400; /* Calibri Normal */
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Schlichte, moderne Card-Designs */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #f1f3f4;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* News/Shop Cards - dunkler */
+        .card-news {
+            background-color: #f1f3f4;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Hintergründe für Call-to-Action */
+        .bg-gray {
+            background-color: #fce5e5;
+            border: none;
+        }
+
+        /* Textfarben */
+        .text-gray-700 {
+            color: #343a40;
+        }
+
+        .text-gray-600 {
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+
+        /* Social Media Table Styling */
+        .w-12 {
+            width: 48px;
+            height: auto;
+        }
+
+        .p-5 {
+            padding: 20px;
+        }
+
+        /* Mobile Optimierung */
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        /* Utility Classes */
+        .pb-5 {
+            padding-bottom: 2rem;
+        }
+
+        .pt-5 {
+            padding-top: 2rem;
+        }
+
+        .my-0 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Links ohne Hover */
+        a {
+            color: #e3001f;
+            text-decoration: none;
+        }
+
+        /* Horizontale Linien - durchgehend rot */
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #e3001f;
+            margin: 1.5rem 0;
+            border-radius: 2px;
+        }
+
+        /* Focus-Styles für Accessibility */
+        .btn:focus,
+        a:focus {
+            outline: 2px solid #e3001f;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--#loop#-->
+        <!--#loopitem name="Intro mit Ueberschrift"#-->
+        <div class="card my-0">
+            <div class="card-body pb-0">
+                <!--#onlineversion#--><p class="text-sm">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
+            </div>
+            <div class="card-body">
+                <!--#html mode="textonly" inline="true"#--><h1 class="mb-2"><b>HIER Aussagekräftige Überschrift für den Newsletter</b></h1><!--#/html#-->
+                <hr>
+                <!--#html mode="default" inline="true"#-->
+                <p class="text-gray-700">
+                    Hallo! Es ist wieder soweit, der Newsletter steht vor der Tür. Diese kleine Einleitung sollte nicht mehr als 150 Zeichen haben. Sie ist aber sehr WICHTIG, denn sie wird von mobilen E-Mail-Apps in der Vorschau angezeigt!
+                </p>
+                <!--#/html#-->
+                <!--#html mode="textonly" inline="true"#-->
+                <p class="text-gray-600">
+                    <br>
+                    Redaktion: Evelyn Bongiorno-Schielke, Stefan Weitzel und Ursula Henkel
+                </p>
+                <!--#/html#-->
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#spacer size="50px"#--><br><!--#/spacer#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Call-to-Action mit Button"#-->
+        <div class="card my-0">
+            <div class="card-body bg-gray">
+                <!--#html mode="default" inline="true"#-->
+                <a href="https://www.gew.de" target="_blank">
+                    <h3>Call-to-Action-Überschrift</h3>
+                </a>
+                <!--#/html#-->
+                <!--#html mode="textonly" inline="true"#-->
+                <p class="pb-5">
+                    Dies ist der Teasertext für eine Kampagne. HIER Darf es etwas mehr Platz sein, um die Ziele der Kampagne zu erläutern. Aber mehr als 350 Zeichen sollten es auch hier nicht sein!
+                </p>
+                <!--#/html#-->
+                <div style="text-align: center;">
+                    <!--#html mode="default" inline="true"#-->
+                    <a href="https://www.gew.de" target="_blank" style="display: inline-block; padding: 12px 32px; background-color: #e3001f; color: #ffffff; text-decoration: none; border-radius: 12px; font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-weight: 600; font-size: 1rem; text-align: center; border: 2px solid #e3001f; min-height: 44px; box-sizing: border-box;">Mehr erfahren!</a>
+                    <!--#/html#-->
+                </div>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Zwischenüberschrift"#-->
+        <div class="card pt-5">
+            <!--#html mode="textonly" inline="true"#--><h2>Zwischenüberschrift</h2><!--#/html#-->
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Shop-Artikel mit Bild"#-->
+        <div class="card card-news my-0">
+            <div class="card-body" style="padding: 1rem;">
+                <table style="width: 100%; border-collapse: separate; border-spacing: 0;">
+                    <tr>
+                        <td style="width: 200px; padding-bottom: 0.75rem;">
+                            <!--#image align="left" #-->
+                            <a href="https://www.gew-shop.de" target="_blank">
+                                <img src="https://dummyimage.com/150x150" alt="Produktbild" style="width: 150px; height: 150px; border-radius: 8px; display: block; object-fit: cover;" />
+                            </a>
+                            <!--#/image#-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--#html mode="default" inline="true"#-->
+                            <a href="https://www.gew-shop.de" target="_blank">
+                                <h3 style="margin-bottom: 0.5rem; font-size: 1.125rem;">Name des Produktes/Artikel</h3>
+                            </a>
+                            <!--#/html#-->
+                            <!--#html mode="textonly" inline="true"#-->
+                            <p style="margin-bottom: 0; font-size: 0.9rem;">
+                                Beschreibung des Produktes. Bitte nicht mehr als 200 Zeichen!
+                            </p>
+                            <!--#/html#-->
+                            <!--#html mode="textonly" inline="true"#-->
+                            <p style="margin-bottom: 0; font-size: 0.9rem;">
+                                <b>Preis: 0,00054 BTC</b>
+                            </p>
+                            <!--#/html#-->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Shop-Artikel ohne Bild"#-->
+        <div class="card card-news my-0">
+            <div class="card-body" style="padding: 1rem;">
+                <!--#html mode="default" inline="true"#-->
+                <a href="https://www.gew-shop.de" target="_blank">
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.125rem;">Name des Produktes/Artikel (ohne Bild)</h3>
+                </a>
+                <!--#/html#-->
+                <!--#html mode="textonly" inline="true"#-->
+                <p style="margin-bottom: 0; font-size: 0.9rem;">
+                    Beschreibung des Produktes. Bitte nicht mehr als 200 Zeichen!
+                </p>
+                <!--#/html#-->
+                <!--#html mode="textonly" inline="true"#-->
+                <p style="margin-bottom: 0; font-size: 0.9rem;">
+                    <b>Preis: 0,00054 BTC</b>
+                </p>
+                <!--#/html#-->
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Newsletter anpassen"#-->
+        <div class="card my-0">
+            <div class="card-body bg-gray">
+                <!--#html mode="textonly" inline="true"#-->
+                <a href="https://www.gew.de/newsletter" target="_blank">
+                    <h3>Du willst mehr oder andere Themen?</h3>
+                </a>
+                <!--#/html#-->
+                <!--#html mode="textonly" inline="true"#-->
+                <p class="pb-5">
+                    Kein Problem! Du kannst deine abonnierten Themen anpassen, neue oder zusätzliche Themen abonnieren.
+                </p>
+                <!--#/html#-->
+                <div style="text-align: center;">
+                    <!--#html mode="textonly" inline="true"#-->
+                    <a href="https://www.gew.de/newsletter" target="_blank" style="display: inline-block; padding: 12px 32px; background-color: #e3001f; color: #ffffff; text-decoration: none; border-radius: 12px; font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-weight: 600; font-size: 1rem; text-align: center; border: 2px solid #e3001f; min-height: 44px; box-sizing: border-box;">Newsletter anpassen</a>
+                    <!--#/html#-->
+                </div>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Social Media Links"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td class="p-5">
+                            <a href="https://www.instagram.com/gew_bund/" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-instagram.png" alt="Instagram">
+                            </a>
+                        </td>
+                        <td class="p-5">
+                            <a href="https://www.facebook.com/GEW.DieBildungsgewerkschaft/" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-facebook.png" alt="Facebook">
+                            </a>
+                        </td>
+                        <td class="p-5">
+                            <a href="https://bsky.app/profile/gew.de" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-Logo-BSKY.png" alt="Bluesky">
+                            </a>
+                        </td>
+                        <td class="p-5">
+                            <a href="https://www.youtube.com/user/GEWHauptvorstand" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-youtube.png" alt="YouTube">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Logo"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center; padding: 2rem 1.5rem;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <!--#image align="center" #-->
+                            <img src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/GEW-Logo-mit-Schriftzug-weiss.png" alt="GEW Logo" style="max-width: 250px; width: 100%; height: auto; display: block; margin: 0 auto;" />
+                            <!--#/image#-->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Newsletter abbestellen"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <!--#unsubscribe#--><a href="{UNSUBSCRIBE}">Diesen Newsletter abbestellen</a><!--#/unsubscribe#-->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="E-Mail Fuss (Impressum)"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <b>Gewerkschaft Erziehung und Wissenschaft (GEW)</b><br>
+                            Hauptvorstand<br>
+                            Reifenberger Str. 21<br>
+                            60489 Frankfurt a.M.<br>
+                            Tel.: 069/78973-0<br>
+                            <a href="https://www.gew.de/kontakt" target="_blank">Kontakt</a><br>
+                            <a href="https://www.gew.de/datenschutz" target="_blank">Datenschutzerklärung</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+    </div>
+</body>
+</html>

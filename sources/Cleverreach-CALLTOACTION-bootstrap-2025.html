@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEW Newsletter</title>
+    <style>
+        /* Basis-Styling mit Calibri */
+        body {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+            background-color: #fafbfc;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        /* Typografie mit Calibri */
+        h1 {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 300; /* Calibri Light */
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            line-height: 1.2;
+            color: #343a40;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 700; /* Calibri Bold */
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            line-height: 1.3;
+            color: #343a40;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 700; /* Calibri Bold */
+            font-size: clamp(1.125rem, 2.8vw, 1.375rem);
+            line-height: 1.4;
+            color: #e3001f;
+            margin-bottom: 0.5rem;
+        }
+
+        h4 {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 700; /* Calibri Bold */
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.4;
+            color: #343a40;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-family: Calibri, "Segoe UI", Arial, sans-serif;
+            font-weight: 400; /* Calibri Normal */
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Schlichte, moderne Card-Designs */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #f1f3f4;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* Schwerpunkt Card - komplett weiß und ohne Rand */
+        .card-spotlight {
+            background-color: #ffffff;
+            border: none;
+        }
+
+        .card-spotlight .bg-gray {
+            background-color: #ffffff !important;
+            border: none !important;
+        }
+
+        /* News Cards - dunkler */
+        .card-news {
+            background-color: #f1f3f4;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Hintergründe für Call-to-Action */
+        .bg-gray {
+            background-color: #fce5e5;
+            border: none;
+        }
+
+        /* Textfarben */
+        .text-gray-700 {
+            color: #343a40;
+        }
+
+        .text-gray-600 {
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+
+        /* News-Bild Styling */
+        .news-img {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        /* Social Media Table Styling */
+        .w-12 {
+            width: 48px;
+            height: auto;
+        }
+
+        .p-5 {
+            padding: 20px;
+        }
+
+        /* Call-to-Action Table Layout */
+        .cta-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .cta-img-cell {
+            width: 33.333333%;
+            vertical-align: top;
+            padding: 1rem;
+        }
+
+        .cta-content-cell {
+            width: 66.666667%;
+            vertical-align: top;
+            padding: 1rem;
+        }
+
+        .cta-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        /* Mobile Optimierung */
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1rem;
+            }
+
+            .news-img {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .cta-table,
+            .cta-table tbody,
+            .cta-table tr,
+            .cta-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .cta-img-cell,
+            .cta-content-cell {
+                width: 100%;
+                padding: 0.5rem;
+            }
+        }
+
+        /* Utility Classes */
+        .pb-5 {
+            padding-bottom: 2rem;
+        }
+
+        .pt-5 {
+            padding-top: 2rem;
+        }
+
+        .my-0 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Links ohne Hover */
+        a {
+            color: #e3001f;
+            text-decoration: none;
+        }
+
+        /* Horizontale Linien - durchgehend rot */
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #e3001f;
+            margin: 1.5rem 0;
+            border-radius: 2px;
+        }
+
+        /* Datum-Styling für Pressemitteilungen */
+        .card-body p b {
+            color: #e3001f;
+            font-size: 0.875rem;
+        }
+
+        /* Focus-Styles für Accessibility */
+        .btn:focus,
+        a:focus {
+            outline: 2px solid #e3001f;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--#loop#-->
+        <!--#loopitem name="Intro mit Ueberschrift"#-->
+        <div class="card my-0">
+            <div class="card-body pb-0">
+                <!--#onlineversion#--><p class="text-sm">Wird diese Nachricht nicht richtig dargestellt, klicken Sie bitte <a href="{ONLINE_VERSION}">hier.</a></p><!--#/onlineversion#-->
+            </div>
+            <div class="card-body">
+                <!--#html mode="textonly" inline="true"#--><h1 class="mb-2"><b>HIER Aussagekräftige Überschrift für den Newsletter</b></h1><!--#/html#-->
+                <hr>
+                <!--#html mode="default" inline="true"#-->
+                <p class="text-gray-700">
+                    Hallo! Wir haben da ein paar Fragen an dich. Magst du uns helfen? Bitte erkläre hier in etwa 250 Zeichen, worum es geht. Du kannst auch hier oben schon einen Link setzen! Zum Beispiel
+                </p>
+                <!--#/html#-->
+                <!--#html mode="textonly" inline="true"#-->
+                <p class="text-gray-600">
+                    <br>
+                    Deine GEW.
+                </p>
+                <!--#/html#-->
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#spacer size="50px"#--><br><!--#/spacer#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Titelbild mit Text und Button (Header)"#-->
+        <div class="card card-spotlight my-0">
+            <!--#image align="center" #-->
+            <img class="img-fluid" src="https://dummyimage.com//600x337" alt="Titelbild" />
+            <!--#/image#-->
+            <div class="card-body bg-gray pb-5">
+                <!--#html mode="default" inline="true"#-->
+                <a href="https://www.gew.de" target="_blank">
+                    <h2>Überschrift des Schwerpunktes</h2>
+                </a>
+                <!--#/html#-->
+                <!--#html mode="default" inline="true"#-->
+                <p class="pb-5">      
+                    Dies ist der Teasertext für den Schwerpunkt. Bitte nicht mehr als 250 Zeichen, da nicht mehr gelesen wird! Bitte nicht mehr als 250 Zeichen formulieren! Bitte nicht mehr als 250 Zeichen formulieren! Bitte nicht mehr als 250 Zeichen formulieren!    
+                </p>
+                <!--#/html#-->
+                <div style="text-align: center;">
+                    <!--#html mode="default" inline="true"#-->
+                    <a href="https://www.gew.de" target="_blank" style="display: inline-block; padding: 16px 40px; background-color: #e3001f; color: #ffffff; text-decoration: none; border-radius: 14px; font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-weight: 600; font-size: 1.125rem; text-align: center; border: 2px solid #e3001f; min-height: 44px; box-sizing: border-box;">Mehr erfahren!</a>
+                    <!--#/html#-->
+                </div>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Zwischenueberschrift"#-->
+        <div class="card pt-5">
+            <!--#html mode="textonly" inline="true"#--><h2>Zwischenüberschrift</h2><!--#/html#-->
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->        
+
+        <!--#loop#-->
+        <!--#loopitem name="Textfeld"#-->
+        <div class="card my-0">
+            <div class="card-body">
+                <!--#html mode="default" inline="true"#-->
+                <p class="text-gray-700">
+                    Wenn Du magst, kannst du ein längeres Stück Text einfügen. Wenn Du magst, kannst du ein längeres Stück Text einfügen. Wenn Du magst, kannst du ein längeres Stück Text einfügen.
+                </p>
+                <!--#/html#-->
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#spacer size="50px"#--><br><!--#/spacer#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Call-to-Action mit Button"#-->
+        <div class="card my-0">
+            <div class="card-body bg-gray">
+                <!--#html mode="default" inline="true"#-->
+                <a href="https://www.gew.de" target="_blank">
+                    <h3>Call-to-Action-Überschrift</h3>
+                </a>
+                <!--#/html#-->
+                <!--#html mode="textonly" inline="true"#-->
+                <p class="pb-5">
+                    Dies ist der Teasertext für eine Kampagne. HIER Darf es etwas mehr Platz sein, um die Ziele der Kampagne zu erläutern. Aber mehr als 350 Zeichen sollten es auch hier nicht sein!
+                </p>
+                <!--#/html#-->
+                <div style="text-align: center;">
+                    <!--#html mode="default" inline="true"#-->
+                    <a href="https://www.gew.de" target="_blank" style="display: inline-block; padding: 12px 32px; background-color: #e3001f; color: #ffffff; text-decoration: none; border-radius: 12px; font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-weight: 600; font-size: 1rem; text-align: center; border: 2px solid #e3001f; min-height: 44px; box-sizing: border-box;">Mehr erfahren!</a>
+                    <!--#/html#-->
+                </div>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop-->               
+
+        <!--#loop#-->
+        <!--#loopitem name="Social Media Links"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td class="p-5">
+                            <a href="https://www.instagram.com/gew_bund/" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-instagram.png" alt="Instagram">
+                            </a>
+                        </td>
+                        <td class="p-5">
+                            <a href="https://www.facebook.com/GEW.DieBildungsgewerkschaft/" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-facebook.png" alt="Facebook">
+                            </a>
+                        </td>
+                        <td class="p-5">
+                            <a href="https://bsky.app/profile/gew.de" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-Logo-BSKY.png" alt="Bluesky">
+                            </a>
+                        </td>
+                        <td class="p-5">
+                            <a href="https://www.youtube.com/user/GEWHauptvorstand" target="_blank">
+                                <img class="w-12" src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/SM-BUTTON-youtube.png" alt="YouTube">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Logo"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center; padding: 2rem 1.5rem;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <!--#image align="center" #-->
+                            <img src="https://www.gew.de/fileadmin/media/images/hv/bilder/Newsletter/GEW-Logo-mit-Schriftzug-weiss.png" alt="GEW Logo" style="max-width: 250px; width: 100%; height: auto; display: block; margin: 0 auto;" />
+                            <!--#/image#-->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="Newsletter abbestellen"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td>
+                            <!--#unsubscribe#--><a href="{UNSUBSCRIBE}">Diesen Newsletter abbestellen</a><!--#/unsubscribe#-->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+        <!--#loop#-->
+        <!--#loopitem name="E-Mail Fuss (Impressum)"#-->
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <b>Gewerkschaft Erziehung und Wissenschaft (GEW)</b><br>
+                            Hauptvorstand<br>
+                            Reifenberger Str. 21<br>
+                            60489 Frankfurt a.M.<br>
+                            Tel.: 069/78973-0<br>
+                            <a href="https://www.gew.de/kontakt" target="_blank">Kontakt</a><br>
+                            <a href="https://www.gew.de/datenschutz" target="_blank">Datenschutzerklärung</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--#/loopitem#-->
+        <!--#/loop#-->
+
+    </div>
+</body>
+</html>
